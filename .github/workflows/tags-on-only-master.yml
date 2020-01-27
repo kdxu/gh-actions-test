@@ -13,3 +13,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Echo test
         run: echo 'tags-only-master'
+      - name: Print variables
+        run: |
+          echo ${{ github.ref }}
+          echo ${{ github.head_ref }}
+          echo ${{ github.base_ref }}
