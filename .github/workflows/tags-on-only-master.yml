@@ -3,6 +3,9 @@ on:
   push:
     tags:
       - '*'
+    branches-ignore:
+      - '!master'
+
 jobs:
   build:
     runs-on: ubuntu-latest
