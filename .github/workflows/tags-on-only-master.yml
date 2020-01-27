@@ -3,8 +3,6 @@ on:
   push:
     tags:
       - '*'
-    branches-ignore:
-      - '!master'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,5 +14,3 @@ jobs:
       - name: Print variables
         run: |
           echo ${{ github.ref }}
-          echo ${{ github.head_ref }}
-          echo ${{ github.base_ref }}
