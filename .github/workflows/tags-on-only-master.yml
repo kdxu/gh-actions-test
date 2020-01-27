@@ -1,4 +1,4 @@
-name: Get branch name from tags
+name: tags only master
 on:
   push:
     tags:
@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
+    steps:
+      - name: Echo test
+        run: echo 'tags-only-master'
