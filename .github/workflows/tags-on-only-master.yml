@@ -1,6 +1,6 @@
 name: tags only master
 on:
-  release:
+  push:
     branches:
       - 'master'
 
@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v1
-      - name: Echo test
-        run: echo 'tags-only-master'
+      - name: Print git branch
+        run: |
+          git branch
       - name: Print variables
         run: |
           echo ${{ github.ref }}
