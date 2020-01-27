@@ -1,10 +1,8 @@
 name: tags only master
 on:
-  push:
-    tags:
-      - '*'
-    branches-ignore:
-      - '!master'
+  release:
+    branches:
+      - 'master'
 
 jobs:
   build:
